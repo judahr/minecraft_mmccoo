@@ -39,7 +39,6 @@ Setup instructions for Ubuntu (though my main machine is Arch):
     make
     
 # Compile the code of this repo
-First, compile the executeable
     cd minecraft_mmccoo
     make
 

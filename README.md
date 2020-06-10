@@ -12,6 +12,7 @@ Setup instructions for Ubuntu (though my main machine is Arch):
     sudo apt install cmake
     sudo apt-get install libcgal-dev
     sudo apt install build-essential
+    sudo apt install apt-file
 
 # setup Snappy
     git clone https://github.com/google/snappy.git
@@ -20,12 +21,16 @@ Setup instructions for Ubuntu (though my main machine is Arch):
     mkdir install
     cd build
     cmake .. -DCMAKE_INSTALL_PREFIX=`realpath ../install`
+    cd
 
 # Magick++ needs to be installed if you want to generate tiles.
     // apt-file search Magick++.h
     // apt-file search Magick++-config
     sudo apt-get install libmagick++-6-headers libmagick++-6.q16-dev
- 
+
+# Clone this project
+    git clone https://github.com/mmccoo/minecraft_mmccoo.git
+
 # Compile leveldb-mcpe
     git clone https://github.com/Mojang/leveldb-mcpe.git
     cd leveldb-mcpe
@@ -35,7 +40,7 @@ Setup instructions for Ubuntu (though my main machine is Arch):
     
 # Compile the code of this repo
 First, compile the executeable
-
+    cd minecraft_mmccoo
     make
 
 # Now setup the web stuff

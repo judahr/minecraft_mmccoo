@@ -19,8 +19,8 @@ ifneq ("$(wildcard /usr/lib/x86_64-linux-gnu/ImageMagick-6.9.7/bin-q16/Magick++-
 	IMAGICK_CPP = $(shell /usr/lib/x86_64-linux-gnu/ImageMagick-6.9.7/bin-q16/Magick++-config  --cxxflags)
 	IMAGICK_LDD = $(shell /usr/lib/x86_64-linux-gnu/ImageMagick-6.9.7/bin-q16/Magick++-config  --ldflags)
 else
-	IMAGICK_CPP = $(shell Magick++-config  --cxxflags)
-	IMAGICK_LDD = $(shell Magick++-config  --ldflags)
+	IMAGICK_CPP = `Magick++-config --cxxflags --cppflags`
+	IMAGICK_LDD = `Magick++-config --ldflags --libs`
 endif
 
 DEPFLAGS = -MT $@ -MMD -MP -MF $*.Td

@@ -41,6 +41,7 @@ Setup instructions for Ubuntu (though my main machine is Arch):
 # Compile the code of this repo
     cd minecraft_mmccoo
     make
+    // lots of linking errors here. 
 
 # Now setup the web stuff
 
